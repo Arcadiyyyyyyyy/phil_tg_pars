@@ -42,7 +42,7 @@ RUN poetry check
 COPY . .
 
 # Install Dependencies
-RUN poetry install --no-interaction --no-cache --without dev
+RUN poetry install --no-interaction --no-cache
 
 #run the application
 CMD [ "poetry", "run", "python", "tg_pars"]
