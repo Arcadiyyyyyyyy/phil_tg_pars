@@ -2,8 +2,14 @@ version: "3.8"
 
 services:
   userbot_controller:
-    image: ''
+    image: 'ghcr.io/arcadiyyyyyyyy/userbot/controller:refs_heads_main'
     pull_policy: always
     restart: on-failure
     env_file:
       - .env
+    volumes:
+      - session:/home/tg_pars/Manageable_Account.session
+
+volumes:
+  session:
+
