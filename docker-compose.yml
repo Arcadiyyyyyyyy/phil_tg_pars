@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  userbot_controller:
+    image: ''
+    pull_policy: always
+    restart: on-failure
+    env_file:
+      - .env

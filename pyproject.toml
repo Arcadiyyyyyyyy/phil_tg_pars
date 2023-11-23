@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "phil-tg-pars"
+version = "0.1.0"
+description = ""
+authors = ["Anton <109826223+Arcadiyyyyyyyy@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "phil_tg_pars"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyrogram = "^2.0.106"
+pydantic-settings = "^2.1.0"
+python-dotenv = "^1.0.0"
+tgcrypto = "^1.2.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
