@@ -8,7 +8,8 @@ async def register_message_handlers():
     async def handle_binance_listings(_, message: Message):
         if message.chat.id != -1001146915409:
             return
-        if "Will List " in message.text:
+        text = message.text or message.caption
+        if "Will List " in text:
             await Bot.userbot.forward_messages(
                 -1001987280310,
                 message.chat.id,
@@ -20,8 +21,9 @@ async def register_message_handlers():
     async def handle_bybit_listings(_, message: Message):
         if message.chat.id != -1001449478440:
             return
-        if "Now Live on Bybit Spot" in message.text or \
-                "Perpetual Contract" in message.text:
+        text = message.text or message.caption
+        if "Now Live on Bybit Spot" in text or \
+                "Perpetual Contract" in text:
             await Bot.userbot.forward_messages(
                 -1001987280310,
                 message.chat.id,
@@ -33,7 +35,8 @@ async def register_message_handlers():
     async def handle_gate_listings(_, message: Message):
         if message.chat.id != -1001179920418:
             return
-        if "Новый листинг" in message.text:
+        text = message.text or message.caption
+        if "Новый листинг" in text:
             await Bot.userbot.forward_messages(
                 -1001987280310,
                 message.chat.id,
@@ -45,7 +48,8 @@ async def register_message_handlers():
     async def handle_okex_listings(_, message: Message):
         if message.chat.id != -1001199213090:
             return
-        if "to list" in message.text:
+        text = message.text or message.caption
+        if "to list" in text:
             await Bot.userbot.forward_messages(
                 -1001987280310,
                 message.chat.id,
@@ -57,7 +61,8 @@ async def register_message_handlers():
     async def handle_test_messages(_, message: Message):
         if message.chat.id != -1001987280310:
             return
-        if "тест" in message.text:
+        text = message.text or message.caption
+        if "тест" in text:
             await Bot.userbot.forward_messages(
                 -1001987280310,
                 message.chat.id,
